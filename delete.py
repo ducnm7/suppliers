@@ -20,8 +20,6 @@ def delete_part(part_id):
             conn.commit()
     except (Exception, psycopg2.DatabaseError) as error:
         print(error)
-    finally:
-        return rows_deleted
 
 if __name__ == '__main__':
     deleted_rows = delete_part(2)
